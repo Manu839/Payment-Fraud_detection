@@ -29,22 +29,22 @@
 ---
 
 ## 📦 Folder Structure (Simplified)
-src/
-│
-├── components/
-│ └── ui/ # All reusable components (buttons, inputs, cards)
-│ └── logic/ # Fraud simulation logic
-│
-├── pages/
-│ ├── Homepage.jsx # Main payment dashboard
-│ ├── Dashboard.jsx # Charts + analytics
-│ ├── RecentTransactions.jsx
-│ ├── About.jsx # Project overview
-│ └── Header.jsx / SidebarContent.jsx
-│
-├── firebase.js # Firebase config
-├── data.js # Sample transaction data
-└── auth.js # Google Sign-In logic
+- src/
+- │
+- ├── components/
+- │ └── ui/ # All reusable components (buttons, inputs, cards)
+- │ └── logic/ # Fraud simulation logic
+- │
+- ├── pages/
+- │ ├── Homepage.jsx # Main payment dashboard
+- │ ├── Dashboard.jsx # Charts + analytics
+- │ ├── RecentTransactions.jsx
+- │ ├── About.jsx # Project overview
+- │ └── Header.jsx / SidebarContent.jsx
+- │
+- ├── firebase.js # Firebase config
+- ├── data.js # Sample transaction data
+- └── auth.js # Google Sign-In logic
 
 
 ---
@@ -63,7 +63,7 @@ cd safepay-ai
 ```bash
 npm install
 ```
-###3. Setup Firebase
+### 3. Setup Firebase
 - Go to Firebase Console
 
 - Create a project
@@ -74,7 +74,7 @@ npm install
 
 - Replace config inside firebase.js with your credentials
 
-###4. Setup the Flask Backend (for prediction)
+### 4. Setup the Flask Backend (for prediction)
 - Located in a separate folder (/backend)
 
 ```bash
@@ -84,18 +84,18 @@ python app.py
 ```
 The backend will run at http://127.0.0.1:5000/.
 
-###5. Run the Frontend
+### 5. Run the Frontend
 ```bash
 npm run dev
 ```
 App will be live at http://localhost:5173 (Vite).
 
-###🔍 How It Works
+### 🔍 How It Works
 - When a user enters a UPI ID, SafePayAI fetches features from the Firestore dataset
 - These features are sent to the Flask backend which predicts fraud likelihood using a trained Random Forest model
 - If flagged as suspicious, the user gets a fraud alert + “See Why” breakdown (based on past transaction attributes)
 
-###🧪 Machine Learning Details
+### 🧪 Machine Learning Details
 - Model	Use :
 - GAN (synthetic data)	Augment fraud/no-fraud data
 - Random Forest	Final fraud classification
@@ -103,7 +103,7 @@ App will be live at http://localhost:5173 (Vite).
 Accuracy: 95% on benchmark UPI fraud datasets
 
 
-# React + Vite
+### React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -115,3 +115,7 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+### 🙌 Acknowledgments
+Built with ❤️ using Firebase, Flask, and modern React
+Inspired by real-world fraud detection systems and financial security models
