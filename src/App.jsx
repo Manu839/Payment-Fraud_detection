@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Homepage from './components/logic/homepage';
+import Dashboard from './components/logic/Dashboard';
+import About from './components/logic/about';
+import Recent from './components/logic/Recent'
+const RouteTitleUpdater = () => {
+  const location = useLocation();
 
-function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    const routeToTitle = {
+      '/': 'SafePayAI - Home',
+      '/dashboard': 'SafePayAI - Dashboard',
+      '/send-money': 'SafePayAI - Send Money',
+      '/transactions': 'SafePayAI - Transactions',
+      '/about': 'SafePayAI - About',
+    };
 
+    const title = routeToTitle[location.pathname] || 'SafePayAI';
+    document.title = title;
+  }, [location]);
+
+  return null; 
+};
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <RouteTitleUpdater />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/send-money" element={<Homepage />} />
+        <Route path="/transactions" element={<Recent />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+    
+  );
+};
 
-export default App
+export default App;
