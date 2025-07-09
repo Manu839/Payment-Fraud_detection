@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Homepage from './components/logic/homepage';
-import Dashboard from './components/logic/Dashboard';
-import About from './components/logic/about';
-import Recent from './components/logic/Recent'
+import Homepage from './components/pages/homepage';
+import Dashboard from './components/pages/Dashboard';
+import About from './components/pages/about';
+import Recent from './components/pages/Recent'
 const RouteTitleUpdater = () => {
   const location = useLocation();
 
