@@ -56,7 +56,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/safepay-ai.git
+git clone https://github.com/Manu839/Payment-Fraud_detection.git
 cd safepay-ai
 ```
 ### Install Frontend Dependencies
