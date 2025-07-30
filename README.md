@@ -19,8 +19,6 @@
 
 <img width="1881" height="846" alt="dash" src="https://github.com/user-attachments/assets/a109ecae-c545-4c2f-8786-4eb806e8f21c" />
 
-<img width="902" height="156" alt="acc" src="https://github.com/user-attachments/assets/6aa3d592-95e5-42d6-8b9d-20d3071ba8ea" />
-
 <img width="1862" height="723" alt="hist" src="https://github.com/user-attachments/assets/22d6a9d0-b1fa-4ec1-8565-be92e8893413" />
 
 <img width="1211" height="392" alt="fraud" src="https://github.com/user-attachments/assets/bdce6bcc-2f08-47b3-8970-a99741d7c2bd" />
@@ -112,7 +110,8 @@ App will be live at http://localhost:5173 (Vite).
 - GAN (synthetic data)	Augment fraud/no-fraud data
 - Random Forest	Final fraud classification
 
-Accuracy: 95% on benchmark UPI fraud datasets
+Accuracy: 97% on benchmark UPI fraud datasets
+<img width="902" height="156" alt="acc" src="https://github.com/user-attachments/assets/6aa3d592-95e5-42d6-8b9d-20d3071ba8ea" />
 
 
 ### React + Vite
